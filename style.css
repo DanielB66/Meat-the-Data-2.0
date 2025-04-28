@@ -1,4 +1,3 @@
-/* קיים */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
@@ -8,10 +7,23 @@ body {
     animation: fadeIn 1.5s ease-in;
 }
 
-/* חדש */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
 .description {
     font-size: 1.2em;
     margin: 20px;
+    padding: 0 10px;
 }
 
 nav ul {
@@ -26,30 +38,37 @@ nav ul li {
     animation: slideIn 0.5s ease forwards;
 }
 
-nav ul li a {
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+nav ul li a, .back-button {
     display: block;
     background-color: #4CAF50;
     color: white;
     text-decoration: none;
     padding: 15px;
     border-radius: 8px;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 300px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button {
+    background-color: #2196F3;
 }
 
 nav ul li a:hover, .back-button:hover {
     background-color: #45a049;
     transform: scale(1.05);
-}
-
-.back-button {
-    display: inline-block;
-    background-color: #2196F3;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
 }
 
 .conclusion {
@@ -64,4 +83,27 @@ nav ul li a:hover, .back-button:hover {
 
 .conclusion h2 {
     color: #333;
+}
+
+/* התאמות מובייל */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+        padding: 15px 0;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    nav ul li a, .back-button {
+        padding: 12px;
+        font-size: 1em;
+        width: 90%;
+    }
+
+    .conclusion {
+        margin: 20px 10px;
+        padding: 15px;
+    }
 }
