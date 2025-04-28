@@ -1,3 +1,4 @@
+/* קיים */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
@@ -7,17 +8,10 @@ body {
     animation: fadeIn 1.5s ease-in;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-h1 {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    margin-bottom: 30px;
-    font-size: 2em;
+/* חדש */
+.description {
+    font-size: 1.2em;
+    margin: 20px;
 }
 
 nav ul {
@@ -32,17 +26,6 @@ nav ul li {
     animation: slideIn 0.5s ease forwards;
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
 nav ul li a {
     display: block;
     background-color: #4CAF50;
@@ -53,7 +36,32 @@ nav ul li a {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, .back-button:hover {
     background-color: #45a049;
     transform: scale(1.05);
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.conclusion {
+    background-color: white;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    text-align: right;
+}
+
+.conclusion h2 {
+    color: #333;
 }
